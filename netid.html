@@ -1,0 +1,1102 @@
+<body marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" onload="aeLoadPage()">
+
+<!-- *** BEGIN story :: shell-v4.tem *** -->
+
+<!-- *** END story :: shell-v4.tem *** -->
+<!-- *** BEGIN shared banner :: shell-v4.tem *** -->
+<!-- *** Begin banner-v4.tem *** -->
+<script type="text/javascript">
+<!--
+	function doFeedBack()
+	{
+           switch ('NETID') {
+             case 'REG01': 
+             case 'REC01': 
+             case 'REC02': 
+             case 'REC03': 
+             case 'REC05': 
+             case 'RECSUM': 
+             case 'CLS01': 
+             case 'CLS02': 
+             case 'CLS03': 
+             case 'CLS04': 
+             case 'CLS05': 
+             case 'CLS07': 
+             case 'CLS08': 
+             case 'CLS16': 
+             case 'CLS17': 
+             case 'CLS18': 
+             case 'CLS19': 
+             case 'CLS22': 
+             case 'PROGRPT': 
+             case 'STATUS': 
+		var win 	= window.open( " http://feedback.byu.edu", "FEEDBACK", "width=800,height=600,scrollbars=yes, resizable=yes" );
+                break
+             default:
+		var win 	= window.open( "/ry/ae/prod/tem/blank.html", "FEEDBACK", "width=600,height=300,scrollbars=yes, resizable=yes" );
+    win.location = "https://y.byu.edu/ry/ae/prod/user_help/cgi/feedback.cgi?app=" +
+                   escape('Net ID and Password') +
+                   "&to=&cc=&bcc=";
+                 break
+           }
+		win.focus();
+	}
+
+	function getHelp(helpwith)
+	{
+		var action 	= "/ry/ae/prod/user_help/cgi/userhelp.cgi"
+  	var parms  	= "?speed_url="+helpwith+"&ischild=yes";
+  	var url    	= action + parms;
+		var win 	= window.open( url, "PORTALHELP", "width=585,height=540,scrollbars=yes, resizable=yes" );
+		win.focus();
+	}
+
+      function selectWebPage( web_resource_id, url )
+     {
+          var indx=url.indexOf("?");
+                    
+          if(url.substring(indx+1,url.length).match(/service=page/)) {
+            indx=url.indexOf("&");
+          }
+          
+          if(indx>=0)
+          {
+            var parms = url.substring(indx+1,url.length);
+			var c = "";
+          	var e = "";
+            
+			if (url.indexOf("c=")>0)
+			{
+				c=url.substr(url.indexOf("c=")+2);
+				if (c.indexOf("&")>0)
+					c = c.substr(0,c.indexOf("&"));
+			}
+			if (url.indexOf("e=")>0)
+			{
+				e=url.substr(url.indexOf("e=")+2);
+				if (e.indexOf("&")>0)
+				e = e.substr(0,e.indexOf("&"));
+			}
+            
+            url=url.substring(0,indx);
+            aeSubmitLink(url,c,e,parms);
+          }
+          else
+          {
+            document.SpeedUrl.action  = url;
+            document.SpeedUrl.method  = 'POST';
+            aeSubmitForm(document.SpeedUrl);
+          }
+    }
+
+    
+	function findWebResource( product_id, thePattern ) 
+	{
+    var action 	= '/ry/ae/prod/navigation/cgi/webResourceXref.cgi';
+    var pattern 	= thePattern.match(/\w+/);
+    if(pattern==null) pattern="";
+	  var url 	= action + '?target_pattern=' + escape(pattern) + '&product_id=' + escape(product_id);
+	  var newWin 	= window.open( url, 'Web_Resource_Search', 'width=600,height=500,location=no,toolbars=yes,scrollbars=yes,status=yes,resizable=yes' );
+	  newWin.focus();
+	}
+//end-->
+</script>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tbody><tr>
+    <td>
+      <!-- **** Table # 1 in banner-v4.tem *** -->
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" height="35" background="https://home.byu.edu/mosaic/oit/stable/web/images/universityBackground.gif">
+        <tbody><tr>
+          <td width="69"><a href="http://www.byu.edu"><img src="https://home.byu.edu/mosaic/oit/stable/web/images/byu.gif" width="69" height="35" alt="BYU Home page" border="0"></a></td>
+          <td nowrap="" class="universityTitle">BRIGHAM YOUNG UNIVERSITY</td>
+          <td align="right">
+            <table cellpadding="0" cellspacing="0" border="0">
+              <tbody><tr>
+                <td nowrap="" align="right" class="university">Search&nbsp;</td>
+
+                <form name="searchForm" method="get" action="http://www.google.com/u/BYU"></form>
+                <td nowrap=""><input type="text" name="q" size="12" maxlength="30">&nbsp;</td>
+                <td nowrap="" valign="center"><a href="javascript:void(document.searchForm.submit())"><img src="https://home.byu.edu/mosaic/oit/stable/web/images/go.gif" width="26" height="19" border="0" alt="Go Search"></a></td>
+
+
+                
+
+
+                <td nowrap="" style="padding-left:20px">&nbsp;&nbsp;</td>
+
+                
+              </tr>
+            </tbody></table>
+          </td>
+        </tr>
+      </tbody></table>
+      <!-- **** Table # 2 in banner-v4.tem *** -->
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" height="31" bgcolor="#405679">
+        <tbody><tr>
+          <td nowrap="" class="colTitle">
+            &nbsp;
+            Net ID and Password&nbsp;
+          </td>
+
+        </tr>
+      </tbody></table>
+
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" style="padding-left: 10px; padding-bottom:10px">
+        <tbody><tr>
+          <td>
+
+            <a class="breadcrumb" href="http://home.byu.edu/webapp/home/index.jsp">BYU.EDU</a><img src="https://home.byu.edu/mosaic/oit/stable/web/images/menuarrow.gif">
+
+
+            
+            <span class="breadcrumb">Net ID and Password</span>
+          </td>
+        </tr>
+        <tr>
+          <td><img src="https://home.byu.edu/mosaic/oit/stable/web/images/blank.gif" class="tabletrim" height="1" width="100%"></td>
+        </tr>
+      </tbody></table>
+
+  </td>
+ </tr>
+</tbody></table>
+<!-- *** end banner-v4.tem *** -->
+
+<!-- *** END shared banner :: shell-v4.tem *** -->
+<!-- *** BEGIN search for :: shell-v4.tem *** -->
+
+<!-- *** END search for :: shell-v4.tem *** -->
+<!-- *** BEGIN navbar for :: shell-v4.tem *** -->
+
+<!-- *** END navbar for :: shell-v4.tem *** -->
+
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%" class="contentCell">
+
+  <tbody><tr>
+
+    <td valign="top">
+<!-- *** BEGIN page data :: shell-v4.tem *** -->
+<style>
+#netidContainer {
+  font-family: verdana,arial,sans-serif;
+  font-size: 75%;
+  background: #C8C8C8 url('../../person/images/NETID_background.jpg') no-repeat;
+  height: 680px;
+  color: #021b49;
+}
+
+#PageTabBody #netidContainer {
+  font-size: 13px;
+}
+
+#netidIntro {
+  padding-left: 30px;
+  color: #405679;
+  font-size: 125%;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.indent {
+  padding-left: 30px;
+}
+
+#netIdContainer button {
+  background-color:#8495A9;
+  color:white;
+  font-family:arial;
+  font-size:13px;
+  font-style:normal;
+}
+
+#netidContainer table {
+  width: 100%;
+  padding-bottom: .5em;
+}
+
+#PageTabBody #netidContainer a {
+  color: #23C;
+}
+
+#PageTabBody #netidContainer a:hover {
+  color: #FFF;
+  text-decoration: underline;
+}
+
+#netidContainer .padBottom {
+  padding-bottom: .5em;
+}
+
+#netidContainer th {
+  background-color: #021B49;
+  color: white;
+  font-family: verdana,arial,sans-serif;
+  padding-right: 5px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-size: 75%;
+  font-weight: bold;
+  text-align: left;
+  vertical-align: top;
+}
+
+#PageTabBody #netidContainer th {
+  font-size: 1em;
+}
+
+#netidContainer th img {
+  vertical-align: top;
+}
+
+#netidContainer td {
+  padding-right: 5px;
+  font-size: 75%;
+  color: #021b49;
+  vertical-align: top;
+}
+
+#PageTabBody #netidContainer td {
+  font-size:1em;
+}
+
+em {
+  font-weight: bold;
+  color: #CD7219;
+}
+
+strong {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.button {
+  font-size: smaller;
+}
+
+body {
+  font-family: helvetica, arial, sans-serif;
+}
+
+#netidContainer #pwmeter {
+  width: 300px;
+}
+#pwbar1 {
+  background-color: #666;
+  height: 4px;
+  width: 300px;
+  margin: 0;
+  padding: 0;
+}
+#pwbar2 {
+  background-color: #666;
+  height: 4px;
+  width: 0px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: -4px;
+}
+#pwlabel {
+  text-align: right;
+  font-weight: bold;
+  color: #666;
+  margin: 0;
+  padding: 0;
+}
+
+#rollup1 > td {
+  padding-top: 2em;
+}
+
+#rollup2, #rollup3, #rollup4, #rollup5, #rollup6 {
+  visibility: hidden;
+}
+
+
+
+</style>
+<script src="../../js/validate.js"></script>
+<script src="../../js/help_popups.js"></script>
+<script>
+  function doDATEcheck(dateIn)
+  {
+    //if(date.value.search(/[0-9A-Z]/g) < 0) return false;
+    //ValidMMDDYYYY(date);
+    var enteredDate = new Date(dateIn.value);
+    if(isNaN(enteredDate.getTime())) {
+      dateIn.value = "";
+      return false;
+    }
+    var today = new Date();
+    var diff = today - enteredDate;
+
+    // if we aren't at least 1 day old
+    if (diff < 86400000 ) {
+      return false;
+    }
+
+    var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    dateIn.value = enteredDate.getDate() + " " + months[enteredDate.getMonth()] + " " +
+      enteredDate.getFullYear();
+    return true;
+  }
+
+  var nameMustHave = /[A-Z]/;
+  var nameMustNotHave = /[^A-Za-z\'\- ]/;
+
+  var snMustHaveIfLongerThanOne = /[a-z]/;
+
+  function toNetId()
+  {
+    var ron = document.getElementById("rest_of_name");
+    if(mustHave("rest_of_name", nameMustHave, "Please enter your first name",
+        "First Name must contain a capital letter"))
+    {
+      ron.select();
+      ron.focus();
+      return false;
+    }
+    if(mustNotHave("rest_of_name", nameMustNotHave,
+        "Illegal characters. Legal characters are A-Z, space, apostrophe, and hyphen."
+        ))
+    {
+      ron.select();
+      ron.focus();
+      return false;
+    }
+
+    var sn = document.getElementById("surname");
+    if(mustHave("surname", nameMustHave, "Please enter your surname",
+      "Surname must contain a capital letter"))
+    {
+      sn.select();
+      sn.focus();
+      return false;
+    }
+    if(sn.value.length > 1 && mustHave("surname", snMustHaveIfLongerThanOne, "Please enter your surname",
+      "Surname must contain a lowercase letter"))
+    {
+      sn.select();
+      sn.focus();
+      return false;
+    }
+    if(mustNotHave("surname", nameMustNotHave,
+      "Illegal characters. Legal characters are A-Z, space, apostrophe, and hyphen."))
+    {
+      sn.select();
+      sn.focus();
+      return false;
+    }
+
+    var pfn = document.getElementById("preferred_first_name");
+    if(mustHave("preferred_first_name", nameMustHave, "Please enter your preferred first name",
+      "Preferred first name must contain a capital letter"))
+    {
+      pfn.select();
+      pfn.focus();
+      return false;
+    }
+    if(mustNotHave("preferred_first_name", nameMustNotHave,
+      "Illegal characters. Legal characters are A-Z, space, apostrophe, and hyphen."))
+    {
+      pfn.select();
+      pfn.focus();
+      return false;
+    }
+
+
+    document.f.ssn.value = document.f.ssn1.value + "-" +
+                           document.f.ssn2.value + "-" +
+                           document.f.ssn3.value;
+
+    document.f.date_of_birth.value = document.f.date_of_birth_day.value + " " +
+                                     document.f.date_of_birth_month.value + " " +
+                                     document.f.date_of_birth_year.value;
+    if(!doDATEcheck(document.f.date_of_birth))
+    {
+      setError("dobDay", "Invalid date of birth. Select your date of birth, Including the year.");
+      document.f.date_of_birth_day.focus();
+      return false;
+    }
+
+    var gender;
+    for(var i=0; i < document.f.gender.length; i++) {
+      if(document.f.gender[i].checked) {
+        gender = document.f.gender[i].value;
+        break;
+      }
+    }
+    if(!gender)
+    {
+      setError("male","Select your gender");
+      document.f.gender[0].focus();
+      return false;
+    } else {
+      clearError("male");
+    }
+    if(document.f.date_of_birth.value == "")
+    {
+      alert("Please enter your birth date.");
+      document.f.date_of_birth_year.focus();
+      return false;
+    }
+
+    if(!document.f.ssn.value.match(/^[0-9]{3}-[0-9]{2}-[0-9]{4}$/))
+    {
+      var ssnMsg = "Your SSN is required if you plan to participate in any of the following:\n"
+                 + "*  Financial Aid (e.g. Pell grants, student loans)\n"
+                 + "*  Educational Tax Credits (IRS 1098-T -- so you can claim "
+                 + "credits on your taxes)\n"
+                 + "*  BYU employment (to work for BYU)"
+                 + "\n\n"
+                 + "If you skip this step now by pressing OK, you will be required to provide your "
+                 + "Social Security card prior to participating in the activities listed above."
+                 + "\n\n"
+                 + "Click Cancel to enter your SSN now or click OK to proceed without SSN.  "
+
+
+      if( !confirm( ssnMsg ) ) {
+        document.f.ssn1.select();
+        document.f.ssn1.focus();
+        return false;
+      }
+    }
+
+
+
+
+
+    document.f.e.value = "@searchForMatch";
+
+    aeSubmitForm(document.f);
+
+  }
+
+  function fillPFN(txRestOfName)
+  {
+    var re=/\s/;
+    var words=txRestOfName.value.split(re);
+    for(var i in words) {
+      if(words[i].length > 1 && !(words[i].length == 2 && words[i].substr(1,1) === ".") ) {
+        document.getElementById("preferred_first_name").value = words[i];
+        return;
+      }
+    }
+    document.getElementById("preferred_first_name").value = txRestOfName.value;
+  }
+
+</script>
+
+<form name="f" action="../../person/cgi/createNetId.cgi" method="POST" onsubmit="return toNetId();">
+<input type="hidden" name="brownie">
+<input type="hidden" name="c" value="getInfo">
+<input type="hidden" name="e" value="@searchForMatch">
+<input type="hidden" name="profile" value="default">
+<input type="hidden" name="ACT" value="">
+<input type="hidden" name="admin_mode" value="">
+
+<input type="hidden" name="ssn">
+
+<input type="hidden" name="date_of_birth">
+<input type="hidden" name="person_id" value="416258412">
+
+
+
+
+
+
+
+<div class="bannerbackground2">&nbsp;</div>
+<div id="netidContainer">
+<div id="netidIntro">
+  Welcome to BYU Net ID Creation
+</div>
+
+<p class="indent"></p>
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody><tr class="bannerbackground2">
+  <th nowrap="" class="indent">&nbsp;</th>
+  <th nowrap="">First and Middle Name(s)
+       <img id="helpGivenNames" src="../../person/images/NETID_question.gif"></th>
+  <th nowrap="">Last Name
+       <img id="helpSurname" src="../../person/images/NETID_question.gif"></th>
+  <th nowrap="">Suffix</th>
+  <th style="width:100%;">&nbsp;</th>
+</tr>
+<tr>
+  <td nowrap="" class="indent">&nbsp;</td>
+  <td nowrap="">
+    <input type="text" id="rest_of_name" name="rest_of_name" value="" maxlength="80" size="30" onchange="fillPFN(this)">
+  </td>
+  <td nowrap="">
+    <input type="text" id="surname" name="surname" value="" maxlength="40" size="20">
+  </td>
+  <td nowrap="">
+    <select id="suffix" name="suffix">
+    
+      <option value="" selected="">none</option>
+    
+      <option value="Jr">Jr</option>
+    
+      <option value="Sr">Sr</option>
+    
+      <option value="I">I</option>
+    
+      <option value="II">II</option>
+    
+      <option value="III">III</option>
+    
+      <option value="IV">IV</option>
+    
+      <option value="V">V</option>
+    
+      <option value="VI">VI</option>
+    
+      <option value="VII">VII</option>
+    
+    </select>
+  </td>
+  <td style="width:100%;">&nbsp;</td>
+</tr>
+</tbody></table>
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody><tr class="bannerbackground2">
+  <th nowrap="" class="indent">&nbsp;</th>
+  <th nowrap="">Preferred First Name</th>
+  <th nowrap="">
+
+  SSN
+  <img id="helpSSN" src="../../person/images/NETID_question.gif"></th>
+
+
+<th nowrap="">Gender
+</th><th style="width:100%;">&nbsp;</th>
+</tr>
+<tr>
+<td nowrap="" class="indent">&nbsp;</td>
+<td nowrap="">
+<input type="text" id="preferred_first_name" name="preferred_first_name" value="" maxlength="25" size="20">
+</td>
+<td nowrap="">
+
+<input type="text" id="ssn1" name="ssn1" value="" size="3" maxlength="3"> -
+<input type="text" id="ssn2" name="ssn2" value="" size="2" maxlength="2"> -
+<input type="text" id="ssn3" name="ssn3" value="" size="4" maxlength="4">
+
+
+</td>
+<td nowrap="">
+<input type="radio" name="gender" id="male" value="M"><label for="male"> Male</label>
+<input type="radio" name="gender" id="female" value="F"><label for="female"> Female</label>
+</td>
+<td style="width:100%;">&nbsp;</td>
+</tr>
+</tbody></table>
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody><tr class="bannerbackground2">
+<th nowrap="" class="indent">&nbsp;</th>
+<th nowrap="" colspan="3">Date of Birth</th>
+<th style="width:100%;">&nbsp;</th>
+</tr>
+<tr class="bannerbackground2">
+<th nowrap="" class="indent">&nbsp;</th>
+<th nowrap="">Month</th>
+<th nowrap="">Day</th>
+<th nowrap="">Year</th>
+<th style="width:100%;">&nbsp;</th>
+</tr>
+<tr>
+<td nowrap="" class="indent">&nbsp;</td>
+<td nowrap="">
+<select id="dobMon" name="date_of_birth_month">
+<option>--</option>
+
+<option value="Jan"> Jan </option>
+
+<option value="Feb"> Feb </option>
+
+<option value="Mar"> Mar </option>
+
+<option value="Apr"> Apr </option>
+
+<option value="May"> May </option>
+
+<option value="Jun"> Jun </option>
+
+<option value="Jul"> Jul </option>
+
+<option value="Aug"> Aug </option>
+
+<option value="Sep"> Sep </option>
+
+<option value="Oct"> Oct </option>
+
+<option value="Nov"> Nov </option>
+
+<option value="Dec"> Dec </option>
+
+</select>
+</td>
+<td nowrap="">
+<select id="dobDay" name="date_of_birth_day" value="">
+<option>--</option>
+
+<option value="01"> 01 </option>
+
+<option value="02"> 02 </option>
+
+<option value="03"> 03 </option>
+
+<option value="04"> 04 </option>
+
+<option value="05"> 05 </option>
+
+<option value="06"> 06 </option>
+
+<option value="07"> 07 </option>
+
+<option value="08"> 08 </option>
+
+<option value="09"> 09 </option>
+
+<option value="10"> 10 </option>
+
+<option value="11"> 11 </option>
+
+<option value="12"> 12 </option>
+
+<option value="13"> 13 </option>
+
+<option value="14"> 14 </option>
+
+<option value="15"> 15 </option>
+
+<option value="16"> 16 </option>
+
+<option value="17"> 17 </option>
+
+<option value="18"> 18 </option>
+
+<option value="19"> 19 </option>
+
+<option value="20"> 20 </option>
+
+<option value="21"> 21 </option>
+
+<option value="22"> 22 </option>
+
+<option value="23"> 23 </option>
+
+<option value="24"> 24 </option>
+
+<option value="25"> 25 </option>
+
+<option value="26"> 26 </option>
+
+<option value="27"> 27 </option>
+
+<option value="28"> 28 </option>
+
+<option value="29"> 29 </option>
+
+<option value="30"> 30 </option>
+
+<option value="31"> 31 </option>
+
+</select>
+</td>
+<td nowrap="">
+<select id="dobYear" name="date_of_birth_year">
+<option>--</option>
+
+<option value="2012">2012</option>
+
+<option value="2011">2011</option>
+
+<option value="2010">2010</option>
+
+<option value="2009">2009</option>
+
+<option value="2008">2008</option>
+
+<option value="2007">2007</option>
+
+<option value="2006">2006</option>
+
+<option value="2005">2005</option>
+
+<option value="2004">2004</option>
+
+<option value="2003">2003</option>
+
+<option value="2002">2002</option>
+
+<option value="2001">2001</option>
+
+<option value="2000">2000</option>
+
+<option value="1999">1999</option>
+
+<option value="1998">1998</option>
+
+<option value="1997">1997</option>
+
+<option value="1996">1996</option>
+
+<option value="1995">1995</option>
+
+<option value="1994">1994</option>
+
+<option value="1993">1993</option>
+
+<option value="1992">1992</option>
+
+<option value="1991">1991</option>
+
+<option value="1990">1990</option>
+
+<option value="1989">1989</option>
+
+<option value="1988">1988</option>
+
+<option value="1987">1987</option>
+
+<option value="1986">1986</option>
+
+<option value="1985">1985</option>
+
+<option value="1984">1984</option>
+
+<option value="1983">1983</option>
+
+<option value="1982">1982</option>
+
+<option value="1981">1981</option>
+
+<option value="1980">1980</option>
+
+<option value="1979">1979</option>
+
+<option value="1978">1978</option>
+
+<option value="1977">1977</option>
+
+<option value="1976">1976</option>
+
+<option value="1975">1975</option>
+
+<option value="1974">1974</option>
+
+<option value="1973">1973</option>
+
+<option value="1972">1972</option>
+
+<option value="1971">1971</option>
+
+<option value="1970">1970</option>
+
+<option value="1969">1969</option>
+
+<option value="1968">1968</option>
+
+<option value="1967">1967</option>
+
+<option value="1966">1966</option>
+
+<option value="1965">1965</option>
+
+<option value="1964">1964</option>
+
+<option value="1963">1963</option>
+
+<option value="1962">1962</option>
+
+<option value="1961">1961</option>
+
+<option value="1960">1960</option>
+
+<option value="1959">1959</option>
+
+<option value="1958">1958</option>
+
+<option value="1957">1957</option>
+
+<option value="1956">1956</option>
+
+<option value="1955">1955</option>
+
+<option value="1954">1954</option>
+
+<option value="1953">1953</option>
+
+<option value="1952">1952</option>
+
+<option value="1951">1951</option>
+
+<option value="1950">1950</option>
+
+<option value="1949">1949</option>
+
+<option value="1948">1948</option>
+
+<option value="1947">1947</option>
+
+<option value="1946">1946</option>
+
+<option value="1945">1945</option>
+
+<option value="1944">1944</option>
+
+<option value="1943">1943</option>
+
+<option value="1942">1942</option>
+
+<option value="1941">1941</option>
+
+<option value="1940">1940</option>
+
+<option value="1939">1939</option>
+
+<option value="1938">1938</option>
+
+<option value="1937">1937</option>
+
+<option value="1936">1936</option>
+
+<option value="1935">1935</option>
+
+<option value="1934">1934</option>
+
+<option value="1933">1933</option>
+
+<option value="1932">1932</option>
+
+<option value="1931">1931</option>
+
+<option value="1930">1930</option>
+
+<option value="1929">1929</option>
+
+<option value="1928">1928</option>
+
+<option value="1927">1927</option>
+
+<option value="1926">1926</option>
+
+<option value="1925">1925</option>
+
+<option value="1924">1924</option>
+
+<option value="1923">1923</option>
+
+<option value="1922">1922</option>
+
+<option value="1921">1921</option>
+
+<option value="1920">1920</option>
+
+<option value="1919">1919</option>
+
+<option value="1918">1918</option>
+
+<option value="1917">1917</option>
+
+<option value="1916">1916</option>
+
+<option value="1915">1915</option>
+
+<option value="1914">1914</option>
+
+<option value="1913">1913</option>
+
+<option value="1912">1912</option>
+
+<option value="1911">1911</option>
+
+<option value="1910">1910</option>
+
+<option value="1909">1909</option>
+
+<option value="1908">1908</option>
+
+<option value="1907">1907</option>
+
+<option value="1906">1906</option>
+
+<option value="1905">1905</option>
+
+<option value="1904">1904</option>
+
+<option value="1903">1903</option>
+
+<option value="1902">1902</option>
+
+<option value="1901">1901</option>
+
+<option value="1900">1900</option>
+
+<option value="1899">1899</option>
+
+<option value="1898">1898</option>
+
+<option value="1897">1897</option>
+
+<option value="1896">1896</option>
+
+<option value="1895">1895</option>
+
+<option value="1894">1894</option>
+
+<option value="1893">1893</option>
+
+<option value="1892">1892</option>
+
+<option value="1891">1891</option>
+
+<option value="1890">1890</option>
+
+<option value="1889">1889</option>
+
+<option value="1888">1888</option>
+
+</select>
+</td>
+<td style="width:100%;">&nbsp;</td>
+</tr>
+</tbody></table>
+
+<div class="indent">
+<input type="submit" class="whiteOnBlue" value="continue">
+</div>
+</div>
+<div class="bannerbackground2">&nbsp;</div>
+
+</form>
+
+<script>
+
+function ssnKeyHandle(e,curr,next,prev,len) {
+  if(!e) e = window.event;
+  var code = e.charCode || e.keyCode;
+  var elem = document.getElementById(curr);
+  if(code==8) {
+    //backspace
+    clearError(curr);
+    if(prev && elem.value.length<=1) {
+      elem=document.getElementById(prev);
+      setTimeout(function(){elem.focus();},0);
+    }
+    return true;
+  } else if(e.charCode == 0 || e.ctrlKey || e.altKey || code < 32) {
+    return true;
+  }
+  clearError(curr);
+  var newValue = elem.value + String.fromCharCode(code);
+  if(newValue.match(/[^0-9]/)) {
+    setError(curr,"Numbers Only!");
+    return false;
+  } else if(next && newValue.length>=len) {
+    elem = document.getElementById(next);
+    elem.value="";
+    setTimeout(function(){elem.focus();},0);
+  }
+};
+
+document.getElementById("ssn1").onkeypress = function(e) {return ssnKeyHandle(e,"ssn1","ssn2",null,3);};
+document.getElementById("ssn2").onkeypress = function(e) {return ssnKeyHandle(e,"ssn2","ssn3","ssn1",2);};
+document.getElementById("ssn3").onkeypress = function(e) {return ssnKeyHandle(e,"ssn3",null,"ssn2");};
+
+
+
+document.getElementById("rest_of_name").onkeyup = function(e) {
+  var elem = document.getElementById("rest_of_name");
+  if(mustNotHave("rest_of_name", nameMustNotHave,
+        "Illegal characters. Legal characters are A-Z, space, apostrophe, and hyphen."))
+  {
+    elem.focus();
+  } else {
+    clearError("rest_of_name");
+  }
+};
+
+document.getElementById("surname").onkeyup = function(e) {
+  var elem = document.getElementById("surname");
+  if(mustNotHave("surname", nameMustNotHave,
+        "Illegal characters. Legal characters are A-Z, space, apostrophe, and hyphen."))
+  {
+    elem.focus();
+  } else {
+    clearError("surname");
+  }
+};
+
+document.getElementById("preferred_first_name").onkeyup = function(e) {
+  var elem = document.getElementById("preferred_first_name");
+  if(mustNotHave("preferred_first_name", nameMustNotHave,
+        "Illegal characters. Legal characters are A-Z, space, apostrophe, and hyphen."))
+  {
+    elem.focus();
+  } else {
+    clearError("preferred_first_name");
+  }
+};
+
+document.getElementById("dobDay").onchange = function(e) { clearError("dobDay"); };
+document.getElementById("dobMon").onchange = function(e) { clearError("dobDay"); };
+document.getElementById("dobYear").onchange = function(e) { clearError("dobDay"); };
+
+aeLoadPage = function() {};
+document.getElementById("rest_of_name").focus();
+
+</script>
+<script src="../../person/tem/netId.helpText.js"></script>
+
+<!-- *** END page data :: shell-v4.tem *** -->
+<!-- *** BEGIN copywrite et. al. :: shell-v4.tem *** -->
+
+<!-- *** END copywrite et. al. :: shell-v4.tem *** -->
+    </td>
+  </tr>
+
+<!-- invisible form for submitting links by POST rather than GET -->
+<form name="invisible_form" method="POST"></form>
+  <input type="hidden" name="c" value="getInfo">
+  <input type="hidden" name="e">
+  <input type="hidden" name="brownie">
+
+
+</tbody></table>
+<div id="loadingDiv" style="display: none; "><img src="../../images/ajax-loader.gif"> Loading</div>
+<script type="text/javascript">
+    // Add a function called center to jQuery
+    jQuery.fn.center = function () {
+        this.css("position","absolute");
+        this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()).toString() + "px");
+        this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + $(window).scrollLeft()).toString() + "px");
+        //z-index must be greater than the z-index of a dialog box. 1000 isn't enough.
+        this.css("z-index", "10000");
+        return this;
+    }
+
+    jQuery('#loadingDiv')
+        .hide()  // hide it initially
+        .ajaxStart(function() {
+            // use the center function defined above to set the css top and left
+            $(this).show().center();
+        })
+        .ajaxStop(function() {
+            $(this).hide();
+        });
+</script>
+
+
+
+
+
+<!-- *** END shell-v4.tem *** -->
+</body>

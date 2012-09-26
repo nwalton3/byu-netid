@@ -1,1 +1,10 @@
+.DS_Store
+
 .sass-cache
+config.rb
+
+css-sass
+css-less
+
+html-slim
+html-haml
