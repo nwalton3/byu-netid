@@ -7,7 +7,6 @@ if(isset($_GET['p'])) {
 if($p == undefined || $p == "") {
   $p = 'netid';
 }
-$p = $p . '.html';
 
 
 ?><!DOCTYPE html>
@@ -24,15 +23,16 @@ $p = $p . '.html';
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="css/boostrap.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap-netid.css">
+        <link rel="stylesheet" href="css/<?php echo $p . "-"; ?>style.css">
         
         <!-- Init script includes Modernizr.js and Lab.js. All other scripts loaded asynchronously with Lab.js. -->
-        <script src="js/init.min.js"></script>
+        <!-- <script src="js/<?php echo $p . "/"; ?>init.min.js"></script> -->
     </head>
     
     <?php 
-      include($p);
+      $page = $p . '.html';
+      include($page);
     ?>
     
 </html>

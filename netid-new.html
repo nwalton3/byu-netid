@@ -1,0 +1,60 @@
+<body><!--[if lt IE 7]>
+  <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+      <![endif]--><form action="../../person/cgi/createNetId.cgi" class="form-horizontal" method="POST" name="f" onsubmit="return toNetId();">
+    <input name="brownie" type="hidden" />
+    <input name="c" type="hidden" value="getInfo" />
+    <input name="e" type="hidden" value="@searchForMatch" />
+    <input name="profile" type="hidden" value="default" />
+    <input name="ACT" type="hidden" value="" />
+    <input name="admin_mode" type="hidden" value="" />
+    <input name="ssn" type="hidden" />
+    <input name="date_of_birth" type="hidden" />
+    <input name="person_id" type="hidden" value="416258412" />
+    <legend>Create a BYU netID</legend>
+    <div class="control-group">
+      <label class="control-label" for="rest_of_name">Name</label>
+      <div class="controls">
+        <input class="input-small" id="rest_of_name" maxlength="80" name="rest_of_name" onchange="fillPFN(this)" placeholder="First" size="30" type="text" value="" />
+        <input class="input-small" id="surname" maxlength="40" name="surname" placeholder="Middle" size="20" type="text" value="" />
+        <span class="break">
+          <input class="input-medium" id="surname" maxlength="40" name="surname" placeholder="Last" size="20" type="text" value="" />
+          <select class="input-mini" id="suffix" name="suffix"><option selected="" value=""></option><option value="Jr">Jr</option><option value="Sr">Sr</option><option value="I">I</option><option value="II">II</option><option value="III">III</option><option value="IV">IV</option><option value="V">V</option><option value="VI">VI</option><option value="VII">VII</option></select></span>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="preferred_first_name">Preferred Name</label>
+      <div class="controls">
+        <input class="input-medium" id="preferred_first_name" maxlength="25" name="preferred_first_name" placeholder="Preferred first name" size="20" type="text" value="" />
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="gender">Gender</label>
+      <div class="controls">
+        <label class="radio">
+          <input id="male" name="gender" type="radio" value="M" /> Male</label><label class="radio">
+          <input id="female" name="gender" type="radio" value="F" /> Female</label>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="ssn1">Social Security<br> Number</label>
+      <div class="controls">
+        <input class="input-small" name="ssn" pattern=" !^\d{3}-\d{2}-\d{4}$" placeholder="       -     -" title="The Social Security Number" type="text" />
+        <a><small>Why this?  </small></a>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="">Birth Date</label>
+      <div class="controls">
+        <select class="input-medium" id="date_of_birth_month" name="date_of_birth_month"><option>Month</option><option value="Jan">January</option><option value="Feb">February </option><option value="Mar">March </option><option value="Apr">April </option><option value="May">May </option><option value="Jun">June </option><option value="Jul">July </option><option value="Aug">August </option><option value="Sep">September </option><option value="Oct">October </option><option value="Nov">November </option><option value="Dec">December </option></select>
+        <input class="input-mini" id="date_of_birth_day" name="date_of_birth_day" placeholder="Day" type="text" value="" />
+        <input class="input-mini" id="date_of_birth_year" name="date_of_birth_year" placeholder="Year" type="text" value="" />
+      </div>
+    </div>
+    <hr />
+    <div class="control-group">
+      <div class="controls">
+        <input class="btn btn-primary btn-large" type="submit" value="Continue" />
+      </div>
+    </div>
+  </form>
+</body>

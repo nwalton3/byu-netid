@@ -1,7 +1,7 @@
 /* Codekit imports */
 
-// @codekit-prepend "common/modernizr.custom.js"
-// @codekit-prepend "common/lab.min.js"
+// @codekit-prepend "../common/modernizr.custom.js"
+// @codekit-prepend "../common/lab.min.js"
 
 
 /*********************************************** 
@@ -10,4 +10,4 @@
 
 if(Modernizr.js) {
   $LAB
-    .script("js/script.min.js"); }
+    .script("js/netid/script.min.js"); }

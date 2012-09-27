@@ -1,0 +1,80 @@
+<body>
+
+<!--[if lt IE 7]>
+		<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+	<![endif]-->
+<form name="f" action="../../person/cgi/createNetId.cgi" method="POST" onsubmit="return toNetId();">
+
+  <input type="hidden" name="brownie">
+  <input type="hidden" name="c" value="getInfo">
+  <input type="hidden" name="e" value="@searchForMatch">
+  <input type="hidden" name="profile" value="default">
+  <input type="hidden" name="ACT" value="">
+  <input type="hidden" name="admin_mode" value="">
+  
+  <input type="hidden" name="ssn">
+  
+  <input type="hidden" name="date_of_birth">
+  <input type="hidden" name="person_id" value="416258412">
+  
+  
+  <label for="rest_of_name">First and Middle Name(s)</label>
+  <input type="text" id="rest_of_name" name="rest_of_name" value="" maxlength="80" size="30" onchange="fillPFN(this)">
+  
+  <label for="surname">Last Name</label>
+  <input type="text" id="surname" name="surname" value="" maxlength="40" size="20">
+  
+  <label for="suffix">Suffix</label>
+  <select id="suffix" name="suffix">
+    <option value="" selected="">none</option>
+    <option value="Jr">Jr</option>
+    <option value="Sr">Sr</option>
+    <option value="I">I</option>
+    <option value="II">II</option>
+    <option value="III">III</option>
+    <option value="IV">IV</option>
+    <option value="V">V</option>
+    <option value="VI">VI</option>
+    <option value="VII">VII</option>
+  </select>
+  
+  <label for="gender">Gender</label>
+  <input type="radio" name="gender" id="male" value="M"><label for="male"> Male</label>
+  <input type="radio" name="gender" id="female" value="F"><label for="female"> Female</label>
+  
+  <label for="preferred_first_name">Preferred first name</label>
+  <input type="text" id="preferred_first_name" name="preferred_first_name" value="" maxlength="25" size="20">
+  
+  <label for="ssn1">Social Security Number</label>
+  <input type="text" id="ssn1" name="ssn1" value="" size="3" maxlength="3"> -
+  <input type="text" id="ssn2" name="ssn2" value="" size="2" maxlength="2"> -
+  <input type="text" id="ssn3" name="ssn3" value="" size="4" maxlength="4">
+  
+  <label for="">Date of birth</label>
+  <label for="date_of_birth_month">Date of birth</label>
+  <select id="date_of_birth_month" name="date_of_birth_month">
+    <option>--</option>
+    <option value="Jan">January</option>
+    <option value="Feb">February </option>
+    <option value="Mar">March </option>
+    <option value="Apr">April </option>
+    <option value="May">May </option>
+    <option value="Jun">June </option>
+    <option value="Jul">July </option>
+    <option value="Aug">August </option>
+    <option value="Sep">September </option>
+    <option value="Oct">October </option>
+    <option value="Nov">November </option>
+    <option value="Dec">December </option>
+  </select>
+  
+  <label for="date_of_birth_day">Day</label>
+  <input type="text" id="date_of_birth_day" name="date_of_birth_day" value="" />
+  
+  <label for="">Year</label>
+  <input type="text" id="date_of_birth_year" name="date_of_birth_year" value="" />
+  
+  <input type="submit" class="whiteOnBlue" value="continue">
+
+</form>
+</body>

@@ -181,7 +181,7 @@
 #netidContainer {
   font-family: verdana,arial,sans-serif;
   font-size: 75%;
-  background: #C8C8C8 url('../../person/images/NETID_background.jpg') no-repeat;
+  background: #C8C8C8 url('img/NETID_background.jpg') no-repeat;
   height: 680px;
   color: #021b49;
 }
@@ -317,8 +317,10 @@ body {
 
 
 </style>
-<script src="../../js/validate.js"></script>
-<script src="../../js/help_popups.js"></script>
+<!--
+<script src="js/netid/validate.js"></script>
+<script src="js/netid/help_popups.js"></script>
+-->
 <script>
   function doDATEcheck(dateIn)
   {
@@ -520,9 +522,9 @@ body {
 <tbody><tr class="bannerbackground2">
   <th nowrap="" class="indent">&nbsp;</th>
   <th nowrap="">First and Middle Name(s)
-       <img id="helpGivenNames" src="../../person/images/NETID_question.gif"></th>
+       <img id="helpGivenNames" src="img/NETID_question.gif"></th>
   <th nowrap="">Last Name
-       <img id="helpSurname" src="../../person/images/NETID_question.gif"></th>
+       <img id="helpSurname" src="img/NETID_question.gif"></th>
   <th nowrap="">Suffix</th>
   <th style="width:100%;">&nbsp;</th>
 </tr>
@@ -570,7 +572,7 @@ body {
   <th nowrap="">
 
   SSN
-  <img id="helpSSN" src="../../person/images/NETID_question.gif"></th>
+  <img id="helpSSN" src="img/NETID_question.gif"></th>
 
 
 <th nowrap="">Gender
@@ -1054,7 +1056,7 @@ aeLoadPage = function() {};
 document.getElementById("rest_of_name").focus();
 
 </script>
-<script src="../../person/tem/netId.helpText.js"></script>
+<!-- <script src="js/netid/netId.helpText.js"></script> -->
 
 <!-- *** END page data :: shell-v4.tem *** -->
 <!-- *** BEGIN copywrite et. al. :: shell-v4.tem *** -->
@@ -1071,28 +1073,8 @@ document.getElementById("rest_of_name").focus();
 
 
 </tbody></table>
-<div id="loadingDiv" style="display: none; "><img src="../../images/ajax-loader.gif"> Loading</div>
-<script type="text/javascript">
-    // Add a function called center to jQuery
-    jQuery.fn.center = function () {
-        this.css("position","absolute");
-        this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()).toString() + "px");
-        this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + $(window).scrollLeft()).toString() + "px");
-        //z-index must be greater than the z-index of a dialog box. 1000 isn't enough.
-        this.css("z-index", "10000");
-        return this;
-    }
+<div id="loadingDiv" style="display: none; "><img src="img/ajax-loader.gif"> Loading</div>
 
-    jQuery('#loadingDiv')
-        .hide()  // hide it initially
-        .ajaxStart(function() {
-            // use the center function defined above to set the css top and left
-            $(this).show().center();
-        })
-        .ajaxStop(function() {
-            $(this).hide();
-        });
-</script>
 
 
 
