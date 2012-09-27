@@ -6,5 +6,4 @@ config.rb
 css-sass
 css-less
 
-html-slim
 html-haml

@@ -1,0 +1,95 @@
+body
+  | <!--[if lt IE 7]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+		<![endif]-->
+	
+  form name="f" class="form-horizontal" action="../../person/cgi/createNetId.cgi" method="POST" onsubmit="return toNetId();"    
+  
+    input type="hidden" name="brownie"    
+    input type="hidden" name="c" value="getInfo"    
+    input type="hidden" name="e" value="@searchForMatch"    
+    input type="hidden" name="profile" value="default"
+    input type="hidden" name="ACT" value=""    
+    input type="hidden" name="admin_mode" value=""    
+    
+    input type="hidden" name="ssn"    
+    
+    input type="hidden" name="date_of_birth"    
+    input type="hidden" name="person_id" value="416258412"    
+    
+    legend Create a BYU netID
+    
+    div.control-group
+      label class="control-label" for="rest_of_name" Name
+      div.controls
+        input class="input-small" type="text" id="rest_of_name" name="rest_of_name" value="" maxlength="80" size="30" onchange="fillPFN(this)" placeholder="First"
+        input class="input-small" type="text" id="surname" name="surname" value="" maxlength="40" size="20" placeholder="Middle"
+        span.break
+          input class="input-medium" type="text" id="surname" name="surname" value="" maxlength="40" size="20" placeholder="Last"
+          select class="input-mini" id="suffix" name="suffix"    
+            option value="" selected="" 
+            option value="Jr" Jr
+            option value="Sr" Sr
+            option value="I" I
+            option value="II" II
+            option value="III" III
+            option value="IV" IV
+            option value="V" V
+            option value="VI" VI
+            option value="VII" VII
+
+    div.control-group
+      label class="control-label" for="preferred_first_name" Preferred Name
+      div.controls
+        input class="input-medium" type="text" id="preferred_first_name" name="preferred_first_name" value="" maxlength="25" size="20" placeholder="Preferred first name"  
+        
+    div.control-group
+      label class="control-label" for="gender" Gender
+      
+      div.controls
+        label.radio
+          input type="radio" name="gender" id="male" value="M"
+          |  Male
+          
+        label.radio
+          input type="radio" name="gender" id="female" value="F"
+          |  Female
+        
+    div.control-group
+      label for="ssn1" class="control-label" Social Security<br> Number
+      div.controls
+        input.input-small type="text" name="ssn" pattern=" !^\d{3}-\d{2}-\d{4}$" title="The Social Security Number" placeholder="       -     -"
+        a 
+          small Why this?  
+        // input type="text" id="ssn1" name="ssn1" value="" size="3" maxlength="3"    
+        // input type="text" id="ssn2" name="ssn2" value="" size="2" maxlength="2"    
+        // input type="text" id="ssn3" name="ssn3" value="" size="4" maxlength="4"    
+    
+    div.control-group
+      label class="control-label" for="" Birth Date
+      
+      div.controls
+        select class="input-medium" id="date_of_birth_month" name="date_of_birth_month"
+          option Month
+          option value="Jan" January
+          option value="Feb" February 
+          option value="Mar" March 
+          option value="Apr" April 
+          option value="May" May 
+          option value="Jun" June 
+          option value="Jul" July 
+          option value="Aug" August 
+          option value="Sep" September 
+          option value="Oct" October 
+          option value="Nov" November 
+          option value="Dec" December 
+  
+        input.input-mini type="text" id="date_of_birth_day" name="date_of_birth_day" value="" placeholder="Day"
+      
+        input.input-mini type="text" id="date_of_birth_year" name="date_of_birth_year" value="" placeholder="Year"
+    
+    hr
+      
+    div.control-group
+      div.controls
+        input type="submit" class="btn btn-primary btn-large" value="Continue"   
